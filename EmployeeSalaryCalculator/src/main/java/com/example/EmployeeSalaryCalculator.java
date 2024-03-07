@@ -42,7 +42,7 @@ public class EmployeeSalaryCalculator
 	{
 		hourlyRate = HR;
 		hoursWorked = HW;
-
+		overTimeRate=hourlyRate*2;
 
 
 
