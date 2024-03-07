@@ -53,8 +53,8 @@ public class EmployeeSalaryCalculator
 					overTime=0;
 					overTimePay=0;
 
-
-
+					//Set gross salary according to hours worked
+					grossSalary=hourlyRate*HW;
 
 				}
 				else
@@ -63,7 +63,11 @@ public class EmployeeSalaryCalculator
 					overTime=HW-standardWorkingHours;
 					overTimePay=overTime*overTimeRate;
 
+					//Set gross salary according to total hours at standard rate
+					grossSalary=standardWorkingHours*hourlyRate;
 				}
+				//Increase gross salary by overtime
+				grossSalary+=overTimePay;
 				return grossSalary;
 	}
 	
